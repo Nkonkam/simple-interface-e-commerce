@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;600;700;400;500&display=swap');
+
+
+
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+
+html {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: rgb(236, 240, 241);
+    width: 100wh;
+    height: 100vh;
+}
+
+.header {
+    text-align: center;
+}
+
+.background-color-1 {
+    background-color: rgb(15, 108, 178);
+    padding: 10px;
+}
+
+.background-color-2 {
+    background: rgb(21, 126, 210);
+}
+
+.container-big {
+
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+.nav-bar-1 .nav a {
+    display: inline-block;
+    border-left: 1px solid rgb(207, 222, 232);
+    margin-bottom: 25px;
+    margin-left: 5px;
+    padding: 7px 13px;
+    color: rgb(207, 222, 232);
+}
+
+.nav-bar-1 .nav .first-link {
+    border-left: 0;
+}
+
+
+.header .language {
+    display: block;
+    padding: 13px 10px;
+    color: rgb(207, 222, 232);
+
+}
+
+
+.header .nav-bar-2 {
+    margin-bottom: 30px;
+    padding-top: 8px;
+    padding-bottom: 14px;
+}
+
+.header .nav-bar-2 .logo {
+    text-align: center;
+    display: block;
+    padding: 10px 25px 8px 25px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    color: white;
+
+}
+
+.header .form {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    background: white;
+    border-radius: 50px;
+}
+
+
+.nav-bar-2 .form .input {
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    padding: 12px 19px 14px 19px;
+    width: calc(100% - 5px);
+}
+
+.nav-bar-2 .form .input:focus {
+    outline: none;
+    border: none;
+}
+
+
+.header .btn-search {
+    background: url(../icons/search.png) center center / contain no-repeat;
+    background-size: 25px;
+    border-radius: 100%;
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: rgb(253, 217, 34);
+}
+
+.nav-bar-2 .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav-bar-2 .nav a {
+    margin-top: 20px;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    color: white;
+    padding: 12px 15px;
+    transition: all 0.3s;
+}
+
+.nav-bar-2 .nav a:hover {
+    color: rgb(21, 126, 210);
+    background-color: white;
+    border-radius: 50px;
+}
+
+.products-bloc {
+    display: grid;
+    grid-template-columns: calc(100%);
+    row-gap: 50px;
+    column-gap: 16px;
+    padding: 22px;
+    background-color: white;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.03);
+}
+
+.card .img {
+    border-radius: 20px;
+}
+
+.card .img img {
+    border-radius: 20px;
+}
+
+
+
+
+
+
+.card .title {
+
+    color: rgb(98, 98, 98);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    display: block;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+
+.card .price {
+    color: rgb(57, 57, 57);
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+
+
+
+@media screen and (min-width:500px) {
+
+    .products-bloc {
+        display: grid;
+        grid-template-columns: repeat(2, calc(100%/2 - 10px));
+
+    }
+
+}
+
+
+
+
+@media screen and (min-width:535px) {
+
+
+    .header {
+        text-align: start;
+    }
+
+    .nav-bar-1 {
+        display: flex;
+        align-items: center;
+
+    }
+
+    .nav-bar-1 .nav {
+        order: 1;
+    }
+
+    .nav-bar-1 .nav a {
+        margin-bottom: 0;
+    }
+
+    .nav-bar-1 .nav a:last-child {
+        padding-right: 0;
+    }
+
+    .nav-bar-1 .language {
+
+        padding: 0;
+        margin-right: auto;
+        order: 0;
+    }
+
+
+
+}
+
+
+
+
+@media screen and (min-width:650px) {
+
+
+    .nav-bar-2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: red;
+    }
+
+    .nav-bar-2 .form {
+        margin-right: 5px;
+        flex: 1;
+    }
+
+    .nav-bar-2 .nav a {
+        margin-top: 0;
+    }
+
+
+
+    .header .nav-bar-2 .logo {
+
+        padding: 10px 25px 8px 0;
+
+
+    }
+
+
+}
+
+
+@media screen and (min-width:1220px) {
+
+    .products-bloc {
+        display: grid;
+
+        grid-template-columns: repeat(3, calc(100%/3 - 10px));
+    }
+
+
+
+}
